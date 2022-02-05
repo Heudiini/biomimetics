@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Biomimetics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        text-transform: uppercase;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      h1,
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .navbar {
+        color: #fff;
+        height: 70px;
+        box-shadow: 2px 2px 2px rgb(5, 2, 2);
+      }
+
+      .navbar .logo {
+        padding-left: 25px;
+        font-size: x-large;
+        font-weight: bold;
+      }
+
+      .navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .photolink {
+        text-decoration: none;
+        color: white;
+        font-size: 10px;
+      }
+
+      .navbar a:hover {
+        color: rgb(100, 241, 171);
+      }
+
+      .navbar .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+      }
+
+      .navbar ul {
+        display: flex;
+      }
+
+      .navbar ul li {
+        margin-left: 0px;
+      }
+
+      .header {
+        color: rgb(7, 7, 7);
+        min-height: 400px;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1;
+      }
+
+      .header img {
+        margin-top: 25px;
+
+        max-width: 350px;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+      }
+
+      .header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .boxes .container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .box {
+        text-align: left;
+        flex: 1;
+        background: #eeeebc;
+        color: black;
+        border-radius: 15px;
+        margin: 20px 10px;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+        padding: 15px 15px;
+      }
+      .js {
+        display: block;
+        margin: 0 auto;
+        background-color: #45bce0;
+        border-radius: 28px;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 15px;
+        padding: 10px 25px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #070807;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+        transition: all 300ms ease-in-out;
+      }
+      .myButton {
+        display: block;
+        margin: 0 auto;
+
+        background-color: #45bce0;
+        border-radius: 28px;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        color: #f8fafa;
+        font-family: Arial;
+        font-size: 16px;
+        padding: 10px 5px;
+        text-decoration: none;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+        transition: all 300ms ease-in-out;
+      }
+      .js:hover {
+        background-color: #09ee96;
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .js:active {
+        position: relative;
+        top: 1px;
+      }
+      .myButton:hover {
+        background-color: #09ee96;
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .myButton:active {
+        position: relative;
+        top: 1px;
+      }
+      .box i {
+        margin-right: 10px;
+      }
+      .parag {
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 768px) {
+        .header .container {
+          flex-direction: column;
+          padding-top: 20px;
+          text-align: center;
+        }
+
+        .boxes .container {
+          display: block;
+          text-align: center;
+        }
+      }
+      footer {
+        color: #070807;
+        font-size: 15px;
+        padding-top: 15px;
+        opacity: 60%;
+        text-align: center;
+        height: 50px;
+      }
+
+      .wlink {
+        border-top: 35px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+          Verdana, sans-serif;
+        text-decoration: none;
+
+        color: rgb(226, 74, 94);
+        animation: animate 8s infinite;
+      }
+      @keyframes animate {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+      .wlink:hover {
+        color: rgb(20, 243, 131);
+      }
+      /*//////////////////////////////////////////////////////////////////////////////////////////////*/
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="https://freeiconshop.com/" target="_blank">
+          <img
+            src="https://freeiconshop.com/wp-content/uploads/edd/earth-flat.png"
+            alt="green logo"
+            style="width: 50px; height: 50px"
+        /></a>
+        <div class="logo">TRYING TO IMITATE NATURE</div>
+        <ul class="nav">
+          <li>
+            <a href="https://www.bbc.com/news/business-34676930" target="_blank">BBC article</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="container">
+        <div>
+          <h1>Biomimetics</h1>
+          <p>
+            The term Biomimetic architecture refers to the study and application of construction
+            principles which are found in natural environments and species, and are translated into
+            the design of sustainable solutions for architecture. Biomimetic architecture uses
+            nature as a model, measure and mentor for providing architectural solutions across
+            scales, which are inspired by natural organisms that have solved similar problems in
+            nature.
+            <a class="wlink" href="https://en.wikipedia.org/wiki/Biomimetics"
+              ><br />
+              LEARN MORE</a
+            >
+          </p>
+        </div>
+
+        <a
+          href="https://www.jw.org/en/library/books/was-life-created/biomimetics-who-designed-it-first/#:~:text=Who%20Deserves%20the%20Credit%3F"
+          target="_blank"
+        >
+          <img alt="biomimetics in car industry" src="biomimetics.jpg" width="350" />
+        </a>
+      </div>
+    </header>
+
+    <section class="boxes">
+      <div class="container">
+        <div class="box">
+          <h2></h2>
+          <p class="parag">
+            Find interested about?
+            <button class="js">yes!</button>
+          </p>
+        </div>
+
+        <div class="box">
+          <h2>find out more!</h2>
+
+          <p class="info">
+            <br /><em> Would you like to learn more?</em>
+            <button class="myButton">Continue reading..</button>
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>2022 Coded by Heidi Mörsky</footer>
+
+    <script>
+      ///////////////////////////////////////////////////////////////////////
+
+      function welcome() {
+        let firstName = prompt("What is your first name?");
+
+        let kappale = document.querySelector(".parag");
+
+        otsikko = `Hi ${firstName}! Welcome to SheCodes 👩‍💻`;
+        kappale.innerHTML = "hi " + firstName + "! Welcome to SheCodes! Lets keep coding!";
+      }
+
+      let applyButton = document.querySelector(".js");
+      applyButton.addEventListener("click", welcome);
+      ///////////////////////////////////////////////
+      function moreAbout() {
+        let more = document.querySelector(".info");
+        more.innerHTML =
+          "Biomimetics or biomimicry is the emulation of the models, systems, and elements of nature for the purpose of solving complex human problems.Biomimetics could in principle be applied in many fields. Because of the diversity and complexity of biological systems, the number of features that might be imitated is large.";
+      }
+
+      let btn2 = document.querySelector(".myButton");
+      btn2.addEventListener("click", moreAbout);
+    </script>
+  </body>
+</html>
