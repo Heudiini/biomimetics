@@ -44,33 +44,28 @@
         margin: 0 auto;
         padding: 0 20px;
       }
-
+      p {
+        font-size: 15px;
+      }
       .navbar {
         color: #fff;
-        height: 70px;
-        box-shadow: 2px 2px 2px rgb(5, 2, 2);
+        height: 60px;
+        box-shadow: 0px 2px 2px rgb(5, 2, 2);
       }
 
       .navbar .logo {
-        padding-left: 25px;
-        font-size: x-large;
-        font-weight: bold;
+        padding-left: 15px;
+        font-size: large;
       }
 
       .navbar a {
         color: #fff;
         text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      .photolink {
-        text-decoration: none;
-        color: white;
-        font-size: 10px;
+        font-size: 16px;
       }
 
       .navbar a:hover {
-        color: rgb(100, 241, 171);
+        color: rgb(137, 214, 245);
       }
 
       .navbar .container {
@@ -182,10 +177,6 @@
       .box i {
         margin-right: 10px;
       }
-      .parag {
-        font-size: 15px;
-        text-transform: uppercase;
-      }
 
       @media (max-width: 768px) {
         .header .container {
@@ -209,7 +200,8 @@
       }
 
       .wlink {
-        border-top: 35px;
+        font-size: 1rem;
+        border-top: 25px;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
           Verdana, sans-serif;
         text-decoration: none;
@@ -237,13 +229,15 @@
         <a href="https://freeiconshop.com/" target="_blank">
           <img
             src="https://freeiconshop.com/wp-content/uploads/edd/globe-flat-128x128.png"
-            alt="logo"
+            alt="earth logo"
             style="width: 50px; height: 50px"
-        /></a> 
-        <div class="logo">TRYING TO IMITATE NATURE</div>
+        /></a>
+        <div class="logo">Imitating Nature</div>
         <ul class="nav">
           <li>
-            <a href="https://www.bbc.com/news/business-34676930" target="_blank">BBC article</a>
+            <a href="https://www.bbc.com/news/business-34676930" target="_blank"
+              >read BBC article</a
+            >
           </li>
           <li>
             <a href="#"></a>
@@ -260,12 +254,10 @@
         <div>
           <h1>Biomimetics</h1>
           <p>
-            The term Biomimetic architecture refers to the study and application of construction
-            principles which are found in natural environments and species, and are translated into
-            the design of sustainable solutions for architecture. Biomimetic architecture uses
-            nature as a model, measure and mentor for providing architectural solutions across
-            scales, which are inspired by natural organisms that have solved similar problems in
-            nature.
+            Biomimetics or biomimicry is the emulation of the models, systems, and elements of
+            nature for the purpose of solving complex human problems. Biomimetics could in principle
+            be applied in many fields. Because of the diversity and complexity of biological
+            systems, the number of features that might be imitated is large.
             <a class="wlink" href="https://en.wikipedia.org/wiki/Biomimetics"
               ><br />
               LEARN MORE</a
@@ -297,16 +289,16 @@
         </div>
 
         <div class="box">
-          <h2>Learn more!</h2>
+          <h2></h2>
 
           <p class="info">
-            <em> Would you like to learn more?</em></br>
-            <button class="myButton">Continue reading..</button>
+            Learn more?
+            <button class="myButton">Keep reading..</button>
           </p>
         </div>
       </div>
     </section>
-    <footer>2022 Coded by Heidi Mörsky </footer>
+    <footer>2022 Coded by Heidi Mörsky</footer>
 
     <script>
       ///////////////////////////////////////////////////////////////////////
@@ -315,9 +307,7 @@
         let firstName = prompt("What is your first name?");
 
         let kappale = document.querySelector(".parag");
-
-        otsikko = `Hi ${firstName}! Welcome to SheCodes 👩‍💻`;
-        kappale.innerHTML = "hi " + firstName + "! Welcome to SheCodes! Lets keep coding!";
+        kappale.innerHTML = "Hi " + firstName + "! Welcome to join our team! Lets keep coding!";
       }
 
       let applyButton = document.querySelector(".js");
@@ -326,7 +316,7 @@
       function moreAbout() {
         let more = document.querySelector(".info");
         more.innerHTML =
-          "Biomimetics or biomimicry is the emulation of the models, systems, and elements of nature for the purpose of solving complex human problems. Biomimetics could in principle be applied in many fields. Because of the diversity and complexity of biological systems, the number of features that might be imitated is large.";
+          "The term Biomimetic architecture refers to the study and application of construction principles which are found in natural environments and species, and are translated into the design of sustainable solutions for architecture. <strong>Biomimetic architecture uses nature as a model,</strong> measure and mentor for providing architectural solutions across scales, which are inspired by natural organisms that have solved similar problems in nature. </br><em> -Wikipedia </em>";
       }
 
       let btn2 = document.querySelector(".myButton");
