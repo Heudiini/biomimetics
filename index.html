@@ -222,6 +222,18 @@
       .wlink:hover {
         color: rgb(20, 243, 131);
       }
+      .colouring{
+        color: rgb(226, 74, 94);
+        animation: animate 8s infinite;
+      }
+      @keyframes animate {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
       /*//////////////////////////////////////////////////////////////////////////////////////////////*/
     </style>
   </head>
@@ -253,15 +265,15 @@
       <div class="container">
         <div>
           <h1>Biomimetics</h1>
-          <p>
-            Biomimetics or biomimicry is the emulation of the models, systems, and elements of
+          <p><br>
+            Biomimetics or biomimicry is  <em>the emulation </em>of the models, systems, and elements of
             nature for the purpose of solving complex human problems. Biomimetics could in principle
             be applied in many fields. Because of the diversity and complexity of biological
             systems, the number of features that might be imitated is large.
             <a class="wlink" href="https://en.wikipedia.org/wiki/Biomimetics"
               ><br />
               LEARN MORE</a
-            >
+            ><hr>
           </p>
         </div>
 
@@ -298,7 +310,9 @@
         </div>
       </div>
     </section>
-    <footer>2022 Coded by Heidi Mörsky</footer>
+    
+
+    <footer>2022 Coded by<span class="colouring"> Heidi Mörsky</span></footer>
 
     <script>
       ///////////////////////////////////////////////////////////////////////
@@ -307,7 +321,7 @@
         let firstName = prompt("What is your first name?");
 
         let kappale = document.querySelector(".parag");
-        kappale.innerHTML = "Hi " + firstName + "! Welcome to join our team! Lets keep coding!";
+        kappale.innerHTML = "Hi " + firstName + "! Welcome to join our team! <strong>Lets keep coding!</strong>";
       }
 
       let applyButton = document.querySelector(".js");
